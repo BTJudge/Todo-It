@@ -127,7 +127,7 @@ var views = {
         var label = document.createElement('label');
 
         checkBox.setAttribute('type', 'checkbox');
-        checkBox.classList.add('checkBox');
+        checkBox.classList.add('checkbox');
         checkMark.classList.add('checkmark');
 
         label.append(checkBox);
