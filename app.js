@@ -40,6 +40,9 @@ var todoList = {
     },
     getTodos: function () {
         var todos = JSON.parse(localStorage.getItem('todos'));
+        if (todo === null) {
+            todos = [];
+        }
         this.todos = todos;
         return this.todos;
     },
