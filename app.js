@@ -40,7 +40,7 @@ var todoList = {
     },
     getTodos: function () {
         var todos = JSON.parse(localStorage.getItem('todos'));
-        if (todo === null) {
+        if (todos === null) {
             todos = [];
         }
         this.todos = todos;
