@@ -1,0 +1,139 @@
+*
+    box-sizing: border-box
+
+body
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-family: Raleway
+    background: #f5f5f5 /* Old browsers */
+    background: -moz-linear-gradient(-30deg, #f5f5f5 70%, #aaaaaa 70%) /* FF3.6-15 */
+    background: -webkit-linear-gradient(-30deg, #f5f5f5 70%,#aaaaaa 70%) /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(150deg, #f5f5f5 70%,#aaaaaa 70%)  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    //font-size: 3.5em
+
+h1
+    font-size: 5em
+
+#container
+    background-color: white
+    box-shadow: 2px 2px 10px #555555
+    width: 100%
+    padding: 0.5em
+    border-radius: 0.3em
+    #todoInput
+        padding: 0.5em
+        width: 100%
+        border-radius: 0.3em
+        border: 1px solid #777777
+        font-family: Raleway
+        font-size: 1em
+    #todoList
+        display: none
+        list-style: none
+        padding: 0
+        li
+            padding: 0.5em
+            display: flex
+            flex-direction: row
+            align-items: center
+            .checkmark
+                display: flex
+                top: 0
+                left: 0
+                height: 25px
+                width: 25px
+                background-color: #eeeeee
+                justify-content: center
+                align-items: center
+                border-radius: 50%
+                &:after
+                    content: ""
+                    display: none
+                    width: 5px
+                    height: 10px
+                    border: solid white
+                    border-width: 0 3px 3px 0
+                    -webkit-transform: rotate(45deg)
+                    -ms-transform: rotate(45deg)
+                    transform: rotate(45deg)
+                    margin-top: -3px    
+            .checkbox
+                position: absolute
+                opacity: 0
+                cursor: pointer
+                height: 0
+                width: 0
+                border-radius: 50%
+                &:checked ~ .checkmark
+                    background-color: #cccccc
+                    &:after
+                        display: inline-block
+            label
+                margin-right: 1em
+                border-radius: 50%
+                &:hover
+                    background-color: #eeeeee
+                    input ~ .checkmark
+                        background-color: #cccccc
+            p
+                flex-basis: 100%
+                line-height: 25px
+                margin: 0 1em 0 0
+            .completed
+                text-decoration: line-through
+                color: #777777
+            .todoItemEdit
+                flex-basis: 100%
+                line-height: 20px
+                margin: 0 1em 0 0
+                border-radius: 0.3em
+                padding: 0 0 0 0.5em
+                width: 100%
+                border-radius: 0.3em
+                border: 1px solid #777777
+                font-family: Raleway
+                font-size: 1em
+            button
+                background-color: white
+                border: none
+                padding: 0
+                border-radius: 0.3em
+                height: 25px
+                width: 25px
+                color: red
+                text-align: center
+                font-size: 0.7em
+                font-family: Raleway
+                font-weight: bold
+                line-height: 25px
+                &:hover
+                    color: white
+                    background-color: red
+                &:active
+                    color: red
+                    background-color: white
+                    border: 2px solid red
+    #controls
+        display: none
+        justify-content: space-between
+        button
+            background-color: white
+            border: 1px solid #777777
+            padding: 0.4em 1em
+            border-radius: 0.3em
+            &:hover
+                background-color: whitesmoke
+            &:active
+                background-color: grey
+                color: white
+    li p, li button, #controls button, h1
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: 
+    input:focus, select:focus, textarea:focus, button:focus
+        outline:none
+
